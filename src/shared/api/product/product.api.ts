@@ -8,20 +8,20 @@ interface IFindAllProducts {
 }
 
 export const ProductApi = {
-	async getAllProducts(params?: IFindAllProducts): Promise<IProduct[]> {
-		const request = await axiosMain().get('/product', {
+	async getAllProducts(params?: IFindAllProducts) {
+		const request = await axiosMain().get<IProduct[]>('/product', {
 			params
 		})
 
 		return request.data
 	},
-	async getOneProduct(id: number): Promise<IProduct> {
-		const request = await axiosMain().get(`/product/${id}`)
+	async getOneProduct(id: number) {
+		const request = await axiosMain().get<IProduct>(`/product/${id}`)
 
 		return request.data
 	},
-	async findPopularProducts(): Promise<IProduct[]> {
-		const request = await axiosMain().get(`/product/find-popular`)
+	async findPopularProducts() {
+		const request = await axiosMain().get<IProduct[]>(`/product/find-popular`)
 
 		return request.data
 	}
