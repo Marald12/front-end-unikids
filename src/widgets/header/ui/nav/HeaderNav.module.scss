@@ -1,0 +1,35 @@
+.nav {
+	height: 100px;
+	background-color: #1788ca;
+	margin-top: 23px;
+	display: flex;
+	align-items: center;
+	border-radius: 15px;
+	padding: 0 15px;
+
+	ul {
+		display: flex;
+		align-items: center;
+		list-style-type: none;
+		flex-wrap: wrap;
+
+		li {
+			> a {
+				color: #fff;
+				font-family: 'Circe', sans-serif;
+				font-size: 18px;
+				line-height: 26px;
+				white-space: nowrap;
+
+				&:hover {
+					color: #dcdbdb;
+					transition: color 0.3s ease-in-out;
+				}
+			}
+
+			&:not(:first-child) {
+				margin-left: 117px;
+			}
+		}
+	}
+}

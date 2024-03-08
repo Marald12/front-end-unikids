@@ -19,9 +19,9 @@ export const categoryApi = {
 
 		return request.data
 	},
-	async getOneMainCategories() {
+	async getOneMainCategories(id: number) {
 		const request = await axiosMain().get<IMainCategory>(
-			'/category/main-category'
+			`/category/main-category/${id}`
 		)
 
 		return request.data

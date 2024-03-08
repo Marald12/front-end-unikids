@@ -1,5 +1,8 @@
 import MainPage from '@/pages/main/MainPage'
+import { NextPage } from 'next'
 
-export default function Home() {
+const Home: NextPage = () => {
 	return <MainPage />
 }
+
+export default Home

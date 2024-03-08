@@ -1,0 +1,59 @@
+.contacts {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding: 17px 0;
+
+	.contacts_socials {
+		display: flex;
+
+		a:not(:first-child) {
+			margin-left: 34px;
+		}
+
+		a:hover {
+			scale: 1.2;
+			transition: scale 0.3s ease-in-out;
+		}
+	}
+
+	.links {
+		display: flex;
+		flex-wrap: wrap;
+
+		a {
+			font-family: 'Ubuntu', sans-serif;
+			font-weight: 400;
+			font-style: normal;
+			white-space: nowrap;
+
+			&:not(:first-child) {
+				margin-left: 32px;
+			}
+
+			&:hover {
+				color: #516774;
+				transition: color 0.3s ease-in-out;
+			}
+		}
+	}
+
+	.phone {
+		span {
+			font-family: 'Ubuntu', sans-serif;
+			font-weight: 400;
+			font-style: normal;
+			color: #516774;
+			font-size: 16px;
+		}
+
+		b {
+			margin-left: 24px;
+			font-family: 'Ubuntu', sans-serif;
+			font-weight: 500;
+			font-style: normal;
+			color: #3d596a;
+			font-size: 20px;
+		}
+	}
+}

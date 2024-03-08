@@ -1,0 +1,31 @@
+.profile {
+	display: flex;
+	justify-content: space-between;
+
+	ul {
+		display: flex;
+		list-style-type: none;
+
+		li {
+			display: flex;
+			align-items: center;
+
+			&:not(:first-child) {
+				margin-left: 32px;
+			}
+
+			&:hover {
+				color: #3d596a;
+				transition: color 0.3s ease-in-out;
+			}
+
+			a {
+				font-family: 'Ubuntu', sans-serif;
+				font-weight: 400;
+				margin-left: 16px;
+				line-height: 24px;
+				white-space: nowrap;
+			}
+		}
+	}
+}
