@@ -1,23 +1,12 @@
 import { FC } from 'react'
 import styles from './HeaderContacts.module.scss'
 import Link from 'next/link'
-import { AiFillInstagram } from 'react-icons/ai'
-import { FaFacebookF, FaTelegram } from 'react-icons/fa'
+import SocialContacts from '@/widgets/header/ui/social-contacts/SocialContacts'
 
 const HeaderContacts: FC = () => {
 	return (
 		<div className={styles.contacts}>
-			<div className={styles.contacts_socials}>
-				<Link href='https://instagram.com' target='_blank'>
-					<AiFillInstagram size={23} />
-				</Link>
-				<Link href='https://facebook.com' target='_blank'>
-					<FaFacebookF size={23} />
-				</Link>
-				<Link href='https://web.telegram.org' target='_blank'>
-					<FaTelegram size={23} />
-				</Link>
-			</div>
+			<SocialContacts />
 			<div className={styles.links}>
 				<Link href=''>Оплата и доставка</Link>
 				<Link href=''>Вопрос ответ</Link>

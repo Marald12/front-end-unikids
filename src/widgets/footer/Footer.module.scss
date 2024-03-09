@@ -1,0 +1,95 @@
+.wrapper {
+	display: flex;
+	justify-content: space-between;
+	margin-top: 159px;
+	position: relative;
+
+	.logo {
+		display: flex;
+		flex-direction: column;
+
+		img {
+			margin-bottom: 37px;
+		}
+
+		a {
+			font-family: Circe, sans-serif;
+			font-size: 16px;
+			line-height: 26px;
+			color: #606060;
+
+			&:not(:first-child) {
+				margin-top: 16px;
+			}
+		}
+	}
+
+	.links {
+		p {
+			font-family: Circe, sans-serif;
+			font-weight: bold;
+			font-size: 20px;
+			line-height: 28px;
+			color: #000;
+		}
+
+		ul {
+			list-style-type: none;
+
+			li {
+				margin-top: 16px;
+
+				a {
+					font-family: Circe, sans-serif;
+					font-weight: 500;
+					font-size: 16px;
+					line-height: 24px;
+					color: #000;
+				}
+			}
+		}
+	}
+
+	.contacts {
+		display: flex;
+		flex-direction: column;
+
+		> div:nth-child(2) {
+			display: flex;
+			flex-direction: column;
+			margin-top: 34px;
+
+			span {
+				font-family: Circe, sans-serif;
+				font-weight: 500;
+				font-size: 16px;
+				line-height: 24px;
+				color: #000;
+
+				> b {
+					font-family: Circe, sans-serif;
+					font-weight: bold;
+					font-size: 16px;
+					line-height: 28px;
+					color: #000;
+				}
+
+				&:not(:first-child) {
+					margin-top: 16px;
+				}
+			}
+		}
+	}
+}
+
+.copyright {
+	display: flex;
+	justify-content: center;
+	padding: 12px 0;
+	background-color: #1788ca;
+	color: #fff;
+	font-family: 'Ubuntu', sans-serif;
+	font-size: 16px;
+	line-height: 26px;
+	margin-top: 104px;
+}

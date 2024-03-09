@@ -1,3 +1,4 @@
+'use server'
 import { FC } from 'react'
 import styles from './HeaderProfile.module.scss'
 import Link from 'next/link'
@@ -7,18 +8,30 @@ import { LuUser2 } from 'react-icons/lu'
 import { FaRegHeart } from 'react-icons/fa'
 import { BsBarChart } from 'react-icons/bs'
 import { BiBasket } from 'react-icons/bi'
+import { hasCookie } from 'cookies-next'
+import { cookies } from 'next/headers'
 
 const HeaderProfile: FC = () => {
+	const isToken = hasCookie('token', { cookies })
+
 	return (
 		<div className={styles.profile}>
 			<Link href='/'>
 				<Image src={Logo} alt={Logo} />
 			</Link>
 			<ul>
-				<li>
-					<LuUser2 size={20} />
-					<Link href='/'>Личный кабинет</Link>
-				</li>
+				{isToken && (
+					<li>
+						<LuUser2 size={20} />
+						<Link href='/profile'>Личный кабинет</Link>
+					</li>
+				)}
+				{!isToken && (
+					<li>
+						<LuUser2 size={20} />
+						<Link href='/login'>Войти / Зарегестрироваться</Link>
+					</li>
+				)}
 				<li>
 					<FaRegHeart size={20} />
 					<Link href='/'>Избранное</Link>

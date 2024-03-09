@@ -12,13 +12,13 @@ export const userApi = {
 
 		return request.data
 	},
-	async getProfile(id: number) {
-		const request = await axiosMain('').get<IUser>(`/user`)
+	async getProfile() {
+		const request = await axiosMain().get<IUser>(`/user/profile`)
 
 		return request.data
 	},
 	async addLikesProduct(id: number) {
-		const request = await axiosMain('').post<IUser>(
+		const request = await axiosMain().post<IUser>(
 			`/user/add-likes-product/${id}`
 		)
 

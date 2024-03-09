@@ -5,8 +5,9 @@ import styles from './MainPageCategoriesList.module.scss'
 import Image from 'next/image'
 import Link from 'next/link'
 import { FaArrowRight } from 'react-icons/fa'
+import { FC } from 'react'
 
-const MainPageCategoriesList = () => {
+const MainPageCategoriesList: FC = () => {
 	const { data: productData } = useQuery({
 		queryKey: ['product'],
 		queryFn: () => productApi.getOneProduct(1)

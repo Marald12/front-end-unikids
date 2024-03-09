@@ -1,0 +1,38 @@
+.button {
+	width: 280px;
+	height: 56px;
+	padding: 16px 33px;
+	border: none;
+	background-color: #ff4438;
+	color: #fff;
+	cursor: pointer;
+	border-radius: 25px;
+	font-family: 'Circe', sans-serif;
+	font-size: 18px;
+	line-height: 26px;
+	transition: background-color 0.3s ease-in-out;
+
+	&:hover {
+		background-color: #f16e67;
+	}
+}
+
+.buttonNoSolid {
+	width: 280px;
+	height: 56px;
+	padding: 16px 33px;
+	border: 2px solid #ff4438;
+	background: none;
+	color: #000;
+	cursor: pointer;
+	border-radius: 25px;
+	font-family: 'Circe Extra', sans-serif;
+	font-size: 18px;
+	font-weight: 600;
+	line-height: 26px;
+	transition: border 0.3s ease-in-out;
+
+	&:hover {
+		border: 2px solid #f16e67;
+	}
+}
